@@ -5,6 +5,7 @@ from algorithms import dfs
 from algorithms import iddfs
 from algorithms import bfs
 from algorithms import greedy
+from algorithms import a_star
 from heuristic import Heuristic
 import time
 
@@ -70,13 +71,11 @@ def generateAndRunGame(configFile, matrixFile):
         print("============================")
     elif config.algorithm == SearchMethods.A_STAR:
         print("============================")
-        print("\n[Starting GREEDY Algorithm]\n")
+        print("\n[Starting A* Algorithm]\n")
         print("============================\n")
-
-        # call
-        
+        a_star.solve(board, heuristic)
         print("\n============================")
-        print("\n[Finished GREEDY Algorithm]\n")
+        print("\n[Finished A* Algorithm]\n")
         print("============================")
     elif config.algorithm == SearchMethods.IDA_STAR:
         print("============================")
